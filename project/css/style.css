@@ -1,78 +1,507 @@
-/* Styling cho body */
+/* =============================================
+   Vintage Melody Club — css/style.css
+   Tone màu: Hồng Pastel Vintage
+   ============================================= */
+
+/* --- Import Google Font --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+
+/* --- CSS Variables (Design Tokens) --- */
+:root {
+  --pink-blush: #f9e4ec;
+  --pink-mid: #f3b8ce;
+  --pink-deep: #d4748f;
+  --pink-accent: #c0506d;
+  --cream: #fdf6f0;
+  --warm-tan: #c4a882;
+  --brown-soft: #7a5c4e;
+  --text-dark: #3d2b2b;
+  --text-mid: #6b4c52;
+  --white: #ffffff;
+  --shadow-soft: 0 4px 20px rgba(192, 80, 109, 0.12);
+  --shadow-hover: 0 8px 30px rgba(192, 80, 109, 0.22);
+  --radius: 14px;
+  --radius-sm: 8px;
+  --transition: 0.3s ease;
+}
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #faf9f6;
-  color: #24313a;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--cream);
+  color: var(--text-dark);
+  font-family: 'Lato', sans-serif;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.75;
+}
+
+/* =============================================
+   HEADER
+   ============================================= */
+header {
+  background: linear-gradient(135deg, var(--pink-blush) 0%, #fce8f3 50%, var(--pink-mid) 100%);
+  text-align: center;
+  padding: 3.5rem 2rem 2.5rem;
+  border-bottom: 3px solid var(--pink-mid);
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: '🎵';
+  position: absolute;
+  font-size: 8rem;
+  opacity: 0.06;
+  top: -1rem;
+  left: -1rem;
+  transform: rotate(-20deg);
+}
+
+header::after {
+  content: '🎶';
+  position: absolute;
+  font-size: 6rem;
+  opacity: 0.06;
+  bottom: -0.5rem;
+  right: 2rem;
+  transform: rotate(15deg);
+}
+
+header .site-logo {
+  font-size: 0.85rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--pink-accent);
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: var(--pink-accent);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.6rem;
+  text-shadow: 1px 2px 8px rgba(192, 80, 109, 0.15);
+}
+
+header p.tagline {
+  font-size: 1.05rem;
+  color: var(--text-mid);
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+}
+
+/* =============================================
+   NAV
+   ============================================= */
+nav {
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  border-bottom: 2px solid var(--pink-mid);
+  box-shadow: 0 2px 12px rgba(192, 80, 109, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: var(--text-mid);
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  display: inline-block;
+  border-bottom: 3px solid transparent;
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+}
+
+nav a:hover {
+  color: var(--pink-accent);
+  background: var(--pink-blush);
+  border-bottom-color: var(--pink-mid);
+  text-decoration: none;
+}
+
+nav a.active {
+  color: var(--pink-accent);
+  border-bottom-color: var(--pink-accent);
+  background: var(--pink-blush);
+}
+
+/* =============================================
+   MAIN WRAPPER
+   ============================================= */
+main {
   max-width: 960px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2.5rem 2rem 3rem;
+  min-height: 60vh;
 }
 
-/* Thanh điều hướng navigation */
-nav {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #e9d5ff;
+/* =============================================
+   SECTIONS
+   ============================================= */
+section {
+  margin-bottom: 3rem;
 }
 
-a {
-  color: #7c3aed;
-  text-decoration: none;
-  font-weight: 600;
+/* --- Hero / Welcome banner --- */
+.hero-banner {
+  background: linear-gradient(120deg, #fce8f3 0%, var(--pink-blush) 100%);
+  border-radius: var(--radius);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border: 1.5px solid var(--pink-mid);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 2.5rem;
 }
 
-a:hover {
-  text-decoration: underline;
+.hero-banner h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--pink-accent);
+  margin-bottom: 0.8rem;
 }
 
-main {
-  min-height: 18rem;
+.hero-banner p {
+  color: var(--text-mid);
+  font-size: 1.05rem;
+  max-width: 620px;
+  margin: 0 auto;
 }
 
-/* Kiểu dáng các tiêu đề h1, h2, h3 */
-h1 {
-  color: #7c3aed;
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-}
-
+/* --- Generic card section title --- */
 h2 {
-  color: #c2410c;
-  font-size: 1.6rem;
-  margin-top: 1.8rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  color: var(--pink-accent);
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--pink-accent), var(--pink-mid));
+  border-radius: 2px;
 }
 
 h3 {
-  color: #047857;
+  font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
-  margin-top: 1.2rem;
+  color: var(--brown-soft);
+  margin-bottom: 0.5rem;
 }
 
 p {
   margin-bottom: 1rem;
+  color: var(--text-dark);
 }
 
-/* Kiểu dáng cho hình ảnh */
+/* =============================================
+   CARD GRIDS
+   ============================================= */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.8rem 1.5rem;
+  border: 1.5px solid var(--pink-mid);
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card .card-icon {
+  font-size: 2.4rem;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+.card h3 {
+  color: var(--pink-accent);
+  margin-bottom: 0.5rem;
+}
+
+/* =============================================
+   EVENTS LIST
+   ============================================= */
+.events-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.events-list li {
+  background: var(--white);
+  border-left: 4px solid var(--pink-accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 1rem 1.4rem;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.events-list .event-date {
+  background: var(--pink-accent);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.events-list .event-info strong {
+  display: block;
+  color: var(--text-dark);
+  font-family: 'Playfair Display', serif;
+}
+
+.events-list .event-info span {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+}
+
+/* =============================================
+   IMAGES
+   ============================================= */
 img {
   max-width: 100%;
   height: auto;
-  border: 4px solid #e9d5ff;
-  border-radius: 12px;
-  margin: 1rem 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius);
+  border: 3px solid var(--pink-mid);
+  box-shadow: var(--shadow-soft);
+  display: block;
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
-/* Kiểu dáng danh sách */
-ul {
-  padding-left: 1.5rem;
-  margin-bottom: 1.5rem;
+img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-hover);
 }
 
-li {
-  margin-bottom: 0.4rem;
+.img-caption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-mid);
+  font-style: italic;
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+/* Two-column image row */
+.img-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* =============================================
+   ABOUT PAGE — Team / History blocks
+   ============================================= */
+.about-block {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  border: 1.5px solid var(--pink-mid);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 2rem;
+}
+
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.4rem;
+  margin-top: 1.2rem;
+}
+
+.member-card {
+  background: var(--pink-blush);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.2rem;
+  text-align: center;
+  border: 1.5px solid var(--pink-mid);
+  transition: transform var(--transition);
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+}
+
+.member-card .avatar {
+  font-size: 2.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.member-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.member-card .role {
+  font-size: 0.85rem;
+  color: var(--pink-accent);
+  font-style: italic;
+}
+
+/* =============================================
+   CONTACT PAGE
+   ============================================= */
+.contact-channels {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin: 1.2rem 0;
+}
+
+.contact-channels li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--white);
+  padding: 1rem 1.4rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--pink-mid);
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition);
+}
+
+.contact-channels li:hover {
+  transform: translateX(6px);
+}
+
+.contact-channels .ch-icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.contact-channels .ch-label {
+  font-weight: 700;
+  color: var(--pink-accent);
+  display: block;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contact-channels .ch-value {
+  color: var(--text-dark);
+}
+
+/* Location box */
+.location-box {
+  background: linear-gradient(120deg, var(--pink-blush), #fce8f3);
+  border-radius: var(--radius);
+  padding: 1.8rem 2rem;
+  border: 1.5px solid var(--pink-mid);
+  box-shadow: var(--shadow-soft);
+  margin-top: 1rem;
+}
+
+.location-box h3 {
+  color: var(--pink-accent);
+  margin-bottom: 0.6rem;
+  font-size: 1.15rem;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer {
+  background: linear-gradient(135deg, var(--pink-blush) 0%, #fce8f3 100%);
+  border-top: 2px solid var(--pink-mid);
+  text-align: center;
+  padding: 1.8rem 2rem;
+  color: var(--text-mid);
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--pink-accent);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* =============================================
+   UTILITY
+   ============================================= */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.82rem;
+  }
+
+  main {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .cards-grid,
+  .img-row,
+  .member-grid {
+    grid-template-columns: 1fr;
+  }
 }

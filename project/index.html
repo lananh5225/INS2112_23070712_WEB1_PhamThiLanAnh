@@ -1,38 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - My Music Universe</title>
+    <meta name="description" content="Vintage Melody Club – Câu lạc bộ Âm nhạc Vintage tại Hà Nội. Khám phá âm nhạc retro, đĩa than và những buổi biểu diễn acoustic đầy cảm xúc.">
+    <title>Trang Chủ – Vintage Melody Club</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- HEADER -->
     <header>
-        <h1>My Music Universe</h1>
-        <p>Your ultimate destination for acoustic tracks and playlists</p>
+        <p class="site-logo">✦ Vintage Melody Club ✦</p>
+        <h1>Vintage Melody Club</h1>
+        <p class="tagline">Nơi âm nhạc vintage chạm đến trái tim bạn</p>
     </header>
 
+    <!-- NAVIGATION -->
     <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
     </nav>
 
+    <!-- MAIN CONTENT -->
     <main>
-        <section>
-            <h2>Welcome to My Music Universe</h2>
-            <p>Discover the latest tracks, curated playlists, and acoustic sessions created with passion.</p>
+
+        <!-- WELCOME / HERO -->
+        <section class="hero-banner">
+            <h2>🎵 Chào mừng đến với Vintage Melody Club!</h2>
+            <p>
+                Câu lạc bộ dành cho những ai yêu thích âm nhạc cổ điển, đĩa than, piano và những giai điệu
+                retro đẹp đẽ vượt thời gian. Hãy cùng chúng tôi tìm lại những thanh âm thuần khiết nhất.
+            </p>
         </section>
-        
-        <article>
-            <h3>Featured Release</h3>
-            <p>Listen to our newly released autumn acoustic album available on all streaming platforms.</p>
-        </article>
+
+        <!-- IMAGES ROW -->
+        <div class="img-row">
+            <figure>
+                <img
+                    src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&q=80"
+                    alt="Đĩa than vinyl vintage đang quay"
+                    width="600"
+                    height="400">
+                <figcaption class="img-caption">🎶 Đĩa than – linh hồn của âm nhạc vintage</figcaption>
+            </figure>
+            <figure>
+                <img
+                    src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=600&q=80"
+                    alt="Cây đàn piano cổ điển trắng"
+                    width="600"
+                    height="400">
+                <figcaption class="img-caption">🎹 Piano – tiếng nói của cảm xúc</figcaption>
+            </figure>
+        </div>
+
+        <!-- WHAT WE DO -->
+        <section>
+            <h2>What We Do</h2>
+            <p>Vintage Melody Club là không gian để các tín đồ âm nhạc gặp gỡ, chia sẻ và cùng nhau trải nghiệm những giá trị âm nhạc bất hủ.</p>
+            <div class="cards-grid">
+                <div class="card">
+                    <span class="card-icon">💿</span>
+                    <h3>Buổi Nghe Nhạc Đĩa Than</h3>
+                    <p>Tổ chức các buổi listening session với bộ sưu tập đĩa than vintage từ thập niên 60–80, mang lại chất âm ấm áp và chân thực.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🎹</span>
+                    <h3>Workshop Nhạc Cụ</h3>
+                    <p>Hướng dẫn chơi piano, guitar acoustic và các nhạc cụ vintage cho người mới bắt đầu đến nâng cao, mỗi cuối tuần.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🎤</span>
+                    <h3>Mini Concert Acoustic</h3>
+                    <p>Sân khấu nhỏ ấm cúng hàng tháng, nơi các thành viên biểu diễn và cùng nhau thưởng thức âm nhạc không khuếch đại.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY JOIN US -->
+        <section>
+            <h2>Why Join Us?</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <span class="card-icon">🌸</span>
+                    <h3>Cộng đồng Gắn kết</h3>
+                    <p>Gia nhập một cộng đồng nhỏ nhưng gắn bó, nơi mọi người đều chia sẻ tình yêu âm nhạc chân thành và không phán xét.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">📚</span>
+                    <h3>Học Hỏi Mỗi Ngày</h3>
+                    <p>Tiếp cận kho kiến thức về lịch sử âm nhạc, cách chăm sóc đĩa than, và kỹ thuật chơi nhạc cụ từ các thành viên có kinh nghiệm.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">✨</span>
+                    <h3>Trải Nghiệm Độc Đáo</h3>
+                    <p>Được tham gia các sự kiện đặc biệt không có ở nơi nào khác – từ "Vinyl Swap" đến "Vintage Music Café" mỗi tháng.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- UPCOMING EVENTS -->
+        <section>
+            <h2>Upcoming Events</h2>
+            <ul class="events-list">
+                <li>
+                    <span class="event-date">20/10/2026</span>
+                    <div class="event-info">
+                        <strong>🎵 Vinyl Night – Đêm Đĩa Than Mùa Thu</strong>
+                        <span>Buổi nghe nhạc đĩa than với chủ đề Jazz & Soul thập niên 70. Địa điểm: CLB, Cầu Giấy.</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="event-date">27/10/2026</span>
+                    <div class="event-info">
+                        <strong>🎹 Workshop: Piano Cho Người Mới Bắt Đầu</strong>
+                        <span>Lớp học piano miễn phí dành cho thành viên mới. Giới hạn 15 người. Đăng ký qua fanpage.</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="event-date">03/11/2026</span>
+                    <div class="event-info">
+                        <strong>🎤 Mini Acoustic Concert – Giai Điệu Mùa Đông</strong>
+                        <span>Sân khấu acoustic ấm cúng với các tiết mục của thành viên CLB. Vào cửa tự do.</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="event-date">10/11/2026</span>
+                    <div class="event-info">
+                        <strong>💿 Vintage Swap Meet – Hoán Đổi Đĩa Nhạc</strong>
+                        <span>Mang đĩa than, CD hay cassette cũ đến trao đổi với các thành viên khác. Không gian cà phê vintage.</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
     </main>
 
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Pham Thi Lan Anh (23070712). All rights reserved.</p>
+        <p>🎵 &copy; 2026 <strong>Vintage Melody Club</strong> &nbsp;|&nbsp; Pham Thi Lan Anh – 23070712 &nbsp;|&nbsp; INS2053</p>
     </footer>
 
 </body>
