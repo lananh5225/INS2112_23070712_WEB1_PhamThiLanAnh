@@ -447,6 +447,97 @@ img:hover {
 }
 
 /* =============================================
+   TABLES (Session 09 - Activities Table)
+   ============================================= */
+.table-container {
+  overflow-x: auto;
+  margin: 1.8rem 0 2rem;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  border: 1.5px solid var(--pink-mid);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+caption {
+  caption-side: top;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--pink-accent);
+  padding: 1.2rem 1rem 0.8rem;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+th, td {
+  border: 1px solid var(--pink-mid);
+  padding: 12px 16px;
+  vertical-align: middle;
+}
+
+thead th {
+  background-color: var(--pink-accent);
+  color: var(--white);
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--white);
+}
+
+tr:nth-child(even) {
+  background-color: #fdf0f5;
+}
+
+tr:hover {
+  background-color: #f8d7e3;
+  transition: background-color var(--transition);
+}
+
+thead tr:hover {
+  background-color: var(--pink-accent);
+}
+
+thead tr:hover th {
+  background-color: var(--pink-accent);
+}
+
+.schedule-notes {
+  background: var(--pink-blush);
+  border-left: 4px solid var(--pink-accent);
+  border-radius: var(--radius-sm);
+  padding: 1.2rem 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.schedule-notes p {
+  color: var(--pink-accent);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.schedule-notes ul {
+  padding-left: 1.4rem;
+  color: var(--text-dark);
+}
+
+.schedule-notes li {
+  margin-bottom: 0.4rem;
+}
+
+/* =============================================
    FOOTER
    ============================================= */
 footer {
@@ -503,5 +594,10 @@ footer a:hover {
   .img-row,
   .member-grid {
     grid-template-columns: 1fr;
+  }
+
+  th, td {
+    padding: 8px 10px;
+    font-size: 0.88rem;
   }
 }
